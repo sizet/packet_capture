@@ -7,6 +7,7 @@ export AR    = $(CROSS)ar
 export STRIP = $(CROSS)strip
 
 CC_FLAGS = -Wall -O2
+LD_FLAGS =
 
 INCLUDE_PATH =
 LIBRARY_PATH =
