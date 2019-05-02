@@ -391,12 +391,21 @@ FREE_02:
 FREE_01:
     return 0;
 FREE_HELP:
-    printf("\npcaket_capture <-i> <-c> [-p]\n");
-    printf("  -i : ethernet interface name.\n");
-    printf("       ex : -i eth0\n");
-    printf("  -c : file path for save captured packet (pcap format).\n");
-    printf("       ex : -c packet.pcap\n");
-    printf("  -p : file path for save process id.\n");
-    printf("       ex : -p /var/run/pcaket_capture.pid\n\n");
+    printf("\npcaket_capture argument-list\n");
+    printf("  argument :\n");
+    printf("    <-i ethernet-interface-name>\n");
+    printf("      capture the packet of this network interface.\n");
+    printf("      ex : -i eth0\n");
+    printf("    <-c file-path>\n");
+    printf("      save captured packet to this file (pcap format).\n");
+    printf("      ex : -c packet.pcap\n");
+    printf("    [-p file-path]\n");
+    printf("      save process id to this file.\n");
+    printf("      ex : -p /var/run/pcaket_capture.pid\n");
+    printf("  signal control :\n");
+    printf("    SIGINT, SIGQUIT, SIGTERM\n");
+    printf("      stop process.\n");
+    printf("    SIGUSR1\n");
+    printf("      show captured packet counter.\n\n");
     return 0;
 }
